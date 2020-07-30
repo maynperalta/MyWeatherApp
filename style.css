@@ -1,0 +1,38 @@
+body {
+    background-color: gray;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    background-color: darkslateblue;
+    padding: 10px;
+    border: 1px solid black;
+    width: 100%;
+}
+
+.city-search {
+    border: 1px solid black;
+    height: 100%;
+}
+
+.current {
+    border: 1px solid black;
+}
+
+.forecast {
+    border: 1px solid black;
+}
+
+.container{
+    background-color: white;
+    height: 600px;
+}
+
+footer {
+    background-color: darkslategray;
+    color: white;
+    border-top: 2px solid lightgrey;
+    text-align: center;
+    padding: 10px;
+}
