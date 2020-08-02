@@ -44,15 +44,15 @@ const searchWeather = (city) => {
         method: "GET"
     }).then(function(response){
         console.log(response);
-
-        var UVI = $("<p>").addClass("card-body").text("UV Index: " + response.current.uvi);
-        if (response.current.uvi <=2){
-            $(UVI).addClass(".low");
+        var UVIEL = parseInt(response.current.uvi)
+        var UVI = $("<p>").addClass("card-body").text("UV Index: " + UVIEL);
+        if (UVIEL <=2){
+            $("p").last().addClass(".low");
         }else if
-            (response.current.uvi >2 && response.current.uvi <5){
-                $(UVI).addClass(".moderate");
+            (UVIEL >2 && UVIEL <5){
+                $("p").last().addClass(".moderate");
             }else{
-                $(UVI).addClass(".severe");
+                $("p").last().addClass(".severe");
             }
         
         $("#current-body").append(UVI);
