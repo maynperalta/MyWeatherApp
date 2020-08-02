@@ -1,5 +1,6 @@
 body {
-    background-color: gray;
+    background-image: url(./assets/background.JPG);
+    background-position: center;
 }
 
 h1 {
@@ -12,8 +13,13 @@ h1 {
     margin: 0 auto;
 }
 
+.col-md-9 {
+    height: 100%;
+    margin: 0 auto;
+    border-left: 1px solid black;
+}
+
 .city-search {
-    border-right: 1px solid black;
     height: 100%;
     margin: 0 auto;
 }
@@ -30,6 +36,8 @@ h1 {
     background-color: white;
     height: auto;
     border: 1px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
 }
 
 footer {
@@ -45,23 +53,49 @@ footer {
 }
 
 .card-body {
-    padding: 0;
+    padding: 2px;
 }
 
 .low {
     background-color: green;
     color: white;
     padding: 5px;
+    display: table;
+    border-radius: 5px;
 }
 
 .moderate {
     background-color: yellow;
     color: black;
     padding: 5px;
+    display: table;
+    border-radius: 5px;
 }
 
 .severe {
     background-color: red;
     color: white;
     padding: 5px;
+    display: table;
+    border-radius: 5px;
+}
+
+.fore {
+    background: blue;
+    color: white;
+    margin: 5px;
+    width: 100%;
+}
+
+.list-group-item {
+    background-color: skyblue;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.list-group-item:hover {
+    box-shadow: slategray;
+    color: white;
+    border: 1px solid blue;
+    cursor: pointer;
 }
