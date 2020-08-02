@@ -55,7 +55,6 @@ const searchWeather = (city) => {
             }else{
               UVI.addClass("severe");
             }
-            //
         
         $("#current-body").append(UVI);
 
@@ -66,22 +65,14 @@ const searchWeather = (city) => {
             colEl.append(cardEl);
 
             $("#forecast-body").append(colEl);
-            
-            var daily = $("<h4>").addClass("card-title").text(today.getDate([j])+1);
-            // var daily = $("<h4>").addClass("card-title").text(moment().date(Number).add(1, "d").format("MM/DD/YY"));
-            // var imgURLEL = "http://openweathermap.org/img/wn/" + response.daily[j].weather[0].icon + "@2png";
+            var daily = $("<h4>").addClass("card-title").text(moment().date(Number).add(1+j, "d").format("MM/DD/YY"));
             var iconEl = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + response.daily[j].weather[0].icon + "@2x.png");
-            // var iconHolderEl = $("<p>").addClass("card-body").text().append(iconEl);
-            // var tempToFEl = ((parseInt(response.daily[j].temp) - 273.15) * 9) / 5 + 32;
             var tempEL = $("<p>").addClass("card-body").text("Temp: " + response.daily[j].temp.day + "°F");
             var humidityEl = $("<p>").addClass("card-body").text("Humidity: " + response.daily[j].humidity + "%");
 
             cardEl.append(daily, iconEl, tempEL, humidityEl);
-            // var cardBodyEl = $("<div>").addClass("card-body");
           }
-          //
     });
-
   });
 };
 

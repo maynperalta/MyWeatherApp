@@ -112,3 +112,7 @@ button:hover {
     background-color: lightblue;
     border: 1px solid darkslateblue;
 }
+
+.five {
+    padding: 5px;
+}
