@@ -91,11 +91,24 @@ footer {
     background-color: skyblue;
     margin: 2px;
     border-radius: 5px;
+    border: 1px solid darkslateblue;
 }
 
 .list-group-item:hover {
-    box-shadow: slategray;
+    background-color: darkslateblue;
     color: white;
-    border: 1px solid blue;
     cursor: pointer;
+}
+
+button {
+    background-color: darkslateblue;
+    color: white;
+    border: none;
+    width: 40px;
+}
+
+button:hover {
+    color: darkslategrey;
+    background-color: lightblue;
+    border: 1px solid darkslateblue;
 }

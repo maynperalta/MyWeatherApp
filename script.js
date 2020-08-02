@@ -1,6 +1,7 @@
 var cities = [];
 var lonEl;
 var latEl;
+var today = new Date();
 
 const searchWeather = (city) => {
   var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=0e9028207cc5ec14308ab8e988b32412";
@@ -65,7 +66,9 @@ const searchWeather = (city) => {
             colEl.append(cardEl);
 
             $("#forecast-body").append(colEl);
-            // var daily = $("<h4>").addClass("card-title").text(moment().format(l[j]));
+            
+            var daily = $("<h4>").addClass("card-title").text(today.getDate([j])+1);
+            // var daily = $("<h4>").addClass("card-title").text(moment().date(Number).add(1, "d").format("MM/DD/YY"));
             // var imgURLEL = "http://openweathermap.org/img/wn/" + response.daily[j].weather[0].icon + "@2png";
             var iconEl = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + response.daily[j].weather[0].icon + "@2x.png");
             // var iconHolderEl = $("<p>").addClass("card-body").text().append(iconEl);
@@ -73,7 +76,7 @@ const searchWeather = (city) => {
             var tempEL = $("<p>").addClass("card-body").text("Temp: " + response.daily[j].temp.day + "°F");
             var humidityEl = $("<p>").addClass("card-body").text("Humidity: " + response.daily[j].humidity + "%");
 
-            cardEl.append(iconEl, tempEL, humidityEl);
+            cardEl.append(daily, iconEl, tempEL, humidityEl);
             // var cardBodyEl = $("<div>").addClass("card-body");
           }
           //
