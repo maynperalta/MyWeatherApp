@@ -11,7 +11,7 @@ const searchWeather = (city) => {
     method: "GET",
   }).then(function (response) {
     console.log(response);
-    $("#current .card-body").empty();
+    $("#current-body").empty();
 
     cities.push(city);
 
@@ -34,7 +34,7 @@ const searchWeather = (city) => {
     var icon = $("<img>").attr("src", imgURL);
     var iconHolder = $("<p>").addClass("card-body").text("Currently: ").append(icon);
 
-    $("#current .card-body").append(h3, date, temp, humidity, windSpeed, iconHolder);
+    $("#current-body").append(h3, date, temp, humidity, windSpeed, iconHolder);
 
     console.log(cities);
 
@@ -46,7 +46,16 @@ const searchWeather = (city) => {
         console.log(response);
 
         var UVI = $("<p>").addClass("card-body").text("UV Index: " + response.current.uvi);
-        $("#current .card-body").append(UVI);
+        if (response.current.uvi <=2){
+            $(UVI).addClass(".low");
+        }else if
+            (response.current.uvi >2 && response.current.uvi <5){
+                $(UVI).addClass(".moderate");
+            }else{
+                $(UVI).addClass(".severe");
+            }
+        
+        $("#current-body").append(UVI);
     });
 
   });

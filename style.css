@@ -43,3 +43,25 @@ footer {
 .card {
     border: none;
 }
+
+.card-body {
+    padding: 0;
+}
+
+.low {
+    background-color: green;
+    color: white;
+    padding: 5px;
+}
+
+.moderate {
+    background-color: yellow;
+    color: black;
+    padding: 5px;
+}
+
+.severe {
+    background-color: red;
+    color: white;
+    padding: 5px;
+}
