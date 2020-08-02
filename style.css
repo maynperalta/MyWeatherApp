@@ -7,13 +7,15 @@ h1 {
     color: white;
     background-color: darkslateblue;
     padding: 10px;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
     width: 100%;
+    margin: 0 auto;
 }
 
 .city-search {
-    border: 1px solid black;
+    border-right: 1px solid black;
     height: 100%;
+    margin: 0 auto;
 }
 
 .current {
@@ -21,12 +23,13 @@ h1 {
 }
 
 .forecast {
-    border: 1px solid black;
+    border-top: 1px solid black;
 }
 
 .container{
     background-color: white;
-    height: 600px;
+    height: auto;
+    border: 1px solid black;
 }
 
 footer {
@@ -35,4 +38,8 @@ footer {
     border-top: 2px solid lightgrey;
     text-align: center;
     padding: 10px;
+}
+
+.card {
+    border: none;
 }

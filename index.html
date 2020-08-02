@@ -16,21 +16,52 @@
         </div>
         <div class="row">
             <div class="col-md-3 city-search">
-                <form id="city-form">
+                <h2 class="search-header">Search for a City</h2>
+                <label class="sr-only" for ="city">Enter City</label>
+                    <div class = "input-group mb-2">
+                        <input
+                        type="text"
+                        class="form-control"
+                        id="city"
+                        placeholder="Enter a City"
+                        />
+                        <button type="submit" id="submit-button">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="city-list">
+                        <ul class="list-group">
+                            <li class="list-group-item">Example City</li>
+                        </ul>
+                    </div>
+                <!-- <form id="city-form">
                     <label for="city-input">Search for a City</label>
                     <input type="text" id="city-input">
                     <br>
                     <input id="add-city" type="submit" value="Add City">
                 </form>
+                <div id="buttons-view"></div> -->
 
             </div>
             <div class="col-md-9">
-                <div class="row current">
-                    <h3>Current Conditions</h3>
+                <div class="weather-current">
+                    <div id="current" class="mt-3">
+                        <div class = "card">
+                            <div class = "card-body">
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!-- <div class="row current">
+
+                </div> -->
                 <div class="row forecast">
                     <h3>5 Day Forecast</h3>
                 </div>
+                <div class="weather-forecast">
+
+                </div> 
 
             </div>
         </div>
