@@ -1,8 +1,7 @@
 /* CSS to style document along with Bootstrap-specific and Font Awesome-specific classes.  */
 body {
     background-image: url(./assets/background.JPG);
-    background-position: center;
-    background-size: stretch;
+    background-size: auto;
     background-repeat: no-repeat;
 }   
 
