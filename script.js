@@ -13,8 +13,6 @@ const searchWeather = (city) => {
     console.log(response);
     $("#current-body").empty();
 
-    cities.push(city);
-
     var cityList = $(".city-list ul");
     cityList.empty();
 
@@ -77,9 +75,12 @@ const searchWeather = (city) => {
 };
 
 $(document).ready(function () {
+  localStorage.getItem("cities", JSON.parse(cities));
   $("#submit-button").on("click", function (event) {
     event.preventDefault();
     var city = $("#city").val().trim();
+    cities.push(city);
+    localStorage.setItem("cities", JSON.stringify(cities));
     searchWeather(city);
     $("#city").val("");
   });
