@@ -10,11 +10,20 @@ This application helps the user see the weather forcast for a city of their choo
 * Bootstrap
 * FontAwesome
 * MomentJS
+* OpenWeatherMap API
 
 ## Screenshots
 ![](assets/weather2.png)
 <br/>
+Screenshot of weather app showing data
+
+<br/>
+
 ![](assets/app.gif)
+<br/>
+Gif demonstrating app functionality
+<br/>
+<br/>
 
 ## Deployed Application
 The deployed application can be found [here](https://maynperalta.github.io/MyWeatherApp/).
