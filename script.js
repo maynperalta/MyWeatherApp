@@ -10,6 +10,8 @@ const searchWeather = (city) => {
     url: queryURL,
     method: "GET",
   }).then(function (response) {
+    cities.push(city);
+    localStorage.setItem("cities", JSON.stringify(cities));
     console.log(response);
     $("#current-body").empty();
 //call for dispBtn function which shows new generated buttons in local storage
@@ -67,6 +69,8 @@ const searchWeather = (city) => {
             cardEl.append(daily, iconEl, tempEL, humidityEl);
           }
     });
+  }).catch(function(){
+    alert("Please enter a valid city.")
   });
 };
 //dispBtn function to generate buttons to hold previously searched cities. Also empties cityList array to prevent duplicating
@@ -86,10 +90,13 @@ $(document).ready(function () {
   $("#submit-button").on("click", function (event) {
     event.preventDefault();
     var city = $("#city").val().trim();
-    cities.push(city);
-    localStorage.setItem("cities", JSON.stringify(cities));
+    if (!city){
+      return alert("Please enter a city.");
+    } 
+    
     searchWeather(city);
     $("#city").val("");
+    
   });
 //call for dispBtn function to display generated buttons in local storage.
   dispBtn();
